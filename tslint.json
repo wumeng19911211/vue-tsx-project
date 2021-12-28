@@ -1,19 +1,16 @@
 {
-  "defaultSeverity": "warning",
-  "extends": [
-    "tslint:recommended"
-  ],
-  "linterOptions": {
-    "exclude": [
-      "node_modules/**"
-    ]
-  },
+  "extends": ["tslint:latest", "tslint-config-prettier"],
   "rules": {
-    "indent": [true, "spaces", 2],
-    "interface-name": false,
-    "no-consecutive-blank-lines": false,
-    "object-literal-sort-keys": false,
+    "jsx-wrap-multiline": false,
+    "no-implicit-dependencies": [true, ["@"]],
+    "no-submodule-imports": false,
+    "no-object-literal-type-assertion": true,
+    "no-console": [true, "log"],
     "ordered-imports": false,
-    "quotemark": [true, "single"]
+    "object-literal-sort-keys": false,
+    "interface-name": [true, "never-prefix"]
+  },
+  "linterOptions": {
+    "exclude": ["config/**/*.js", "node_modules/**"]
   }
 }
